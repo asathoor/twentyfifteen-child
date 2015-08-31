@@ -1,6 +1,8 @@
 The Twentyfifteen Child
 =======================
 
+> A theme for the third semester Multimedia Design And Communicaiton Programme @BusinessAcademyAarhus [eaaa.dk](http://eaaa.dk).
+
 ## Tweaks
 
 In this child theme I have:
@@ -11,11 +13,11 @@ In this child theme I have:
 * Experimented with SASS
 
 
-## Display the avatar
+## Display an avatar
 
 ~~~~ 
 echo "<div class='avatar'>" 
 . get_avatar( get_the_author_meta( 'ID' ), 32 ) 
 . "</div>";
 ~~~~
-# twentyfifteen-child
+
