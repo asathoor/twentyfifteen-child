@@ -47,6 +47,7 @@ get_header(); ?>
 
  	<div class="entry">
  		<?php the_content(); ?>
+		<?php echo get_avatar( get_the_author_email(), '80' ); ?>
  	</div>
 
 
@@ -81,17 +82,20 @@ get_header(); ?>
 	<p>
 		<h2>List of authors:</h2>
 <ul>
+<ul>
 <?php wp_list_authors(); ?>
+</ul>
+
+<ul>
+<?php wp_list_pages(); ?>
 </ul>
 	</p>
   </div>
 </div>
 
-  <script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
-  </script>
+<?php 
+/* this is how to make your own hook */
+do_action( "add_accordion_script" ); // defines our own hook ?>
 
 <!-- ends accordion -->
 

@@ -82,17 +82,20 @@ get_header(); ?>
 	<p>
 		<h2>List of authors:</h2>
 <ul>
+<ul>
 <?php wp_list_authors(); ?>
+</ul>
+
+<ul>
+<?php wp_list_pages(); ?>
 </ul>
 	</p>
   </div>
 </div>
 
-  <script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
-  </script>
+<?php 
+/* this is how to make your own hook */
+do_action( "add_accordion_script" ); // defines our own hook, see functions.php ?>
 
 <!-- ends accordion -->
 
