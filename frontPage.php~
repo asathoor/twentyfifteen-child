@@ -7,39 +7,83 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 
-		<!-- accordion -->
-
-<div id="accordion" style="width:80%;margins:auto;">
+<!-- Jquery: try Accordion -->
+<div id="accordion">
   <h3>Does JQ Work here?</h3>
   <div>
     <p>
     Yeah!
     </p>
   </div>
-  <h3>Section 2</h3>
+  <h3>A Loop</h3>
   <div>
     <p>
-		Yeah, it's kinda horrible. But JQ accordion is up and running. 
-		Styles are missing ...
+<!-- the loop -->
+
+ <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+
+ 	<!-- Test if the current post is in category 3. -->
+ 	<!-- If it is, the div box is given the CSS class "post-cat-three". -->
+ 	<!-- Otherwise, the div box is given the CSS class "post". -->
+
+ 	<?php if ( in_category( '3' ) ) : ?>
+ 		<div class="post-cat-three">
+ 	<?php else : ?>
+ 		<div class="post">
+ 	<?php endif; ?>
+
+
+ 	<!-- Display the Title as a link to the Post's permalink. -->
+
+ 	<h2><a href="<?php the_permalink(); ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
+
+
+ 	<!-- Display the date (November 16th, 2009 format) and a link to other posts by this posts author. -->
+
+ 	<small><?php the_time('F jS, Y'); ?> by <?php the_author_posts_link(); ?></small>
+
+
+ 	<!-- Display the Post's content in a div box. -->
+
+ 	<div class="entry">
+ 		<?php the_content(); ?>
+ 	</div>
+
+
+ 	<!-- Display a comma separated list of the Post's Categories. -->
+
+ 	
+ 	</div> <!-- closes the first div box -->
+
+
+ 	<!-- Stop The Loop (but note the "else:" - see next line). -->
+
+ <?php endwhile; else : ?>
+
+
+ 	<!-- The very first "if" tested to see if there were any Posts to -->
+ 	<!-- display.  This "else" part tells what do if there weren't any. -->
+ 	<p><?php _e( 'Sorry, no posts matched your criteria.' ); ?></p>
+
+
+ 	<!-- REALLY stop The Loop. -->
+ <?php endif; ?>
+
+
     </p>
   </div>
-  <h3>Loop here</h3>
+  <h3>Search</h3>
   <div>
-	Content here ...	
+	<?php get_search_form(); ?>
   </div>
-  <h3>Section 4</h3>
+  <h3><?php bloginfo('name'); ?></h3>
   <div>
-    <p>
-    Cras dictum. Pellentesque habitant morbi tristique senectus et netus
-    et malesuada fames ac turpis egestas. Vestibulum ante ipsum primis in
-    faucibus orci luctus et ultrices posuere cubilia Curae; Aenean lacinia
-    mauris vel est.
-    </p>
-    <p>
-    Suspendisse eu nisl. Nullam ut libero. Integer dignissim consequat lectus.
-    Class aptent taciti sociosqu ad litora torquent per conubia nostra, per
-    inceptos himenaeos.
-    </p>
+	<p>
+		<h2>List of authors:</h2>
+<ul>
+<?php wp_list_authors(); ?>
+</ul>
+	</p>
   </div>
 </div>
 
@@ -49,7 +93,7 @@ get_header(); ?>
   });
   </script>
 
-		<!-- ends accordion -->
+<!-- ends accordion -->
 
 
 
