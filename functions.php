@@ -10,8 +10,13 @@ add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 function theme_enqueue_styles() {
     wp_enqueue_style( 'Mother Stylesheet', get_template_directory_uri() . '/style.css' ); 
-	// if you need more add them here ...
+	// Jquery UI
+    wp_enqueue_script('Jquery','//code.jquery.com/jquery-1.10.2.js');
+    wp_enqueue_script('Jquery UI','//code.jquery.com/ui/1.11.4/jquery-ui.js');
+	wp_enqueue_style('Jquery UI style','//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 } 
+
+
 
 /** 
 FILTERS
