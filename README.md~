@@ -1,0 +1,18 @@
+The Twentyfifteen Child
+=======================
+
+## Tweaks
+
+In this child theme I have enabled:
+
+* Jquery
+* Used filters, hooks etc.
+
+
+## Display the avatar
+
+~~~~ 
+echo "<div class='avatar'>" 
+. get_avatar( get_the_author_meta( 'ID' ), 32 ) 
+. "</div>";
+~~~~
