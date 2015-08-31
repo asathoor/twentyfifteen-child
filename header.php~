@@ -1,4 +1,3 @@
-<?php load_theme_textdomain('twentyfifteen-child'); ?>
 <?php
 /**
  * The template for displaying the header
@@ -25,7 +24,7 @@
 	<!-- this will enable jquery -->
 	<?php wp_enqueue_script("jquery"); ?>
 
-
+	<!-- wp_head() from here to /head -->
 	<?php wp_head(); ?>
 </head>
 
