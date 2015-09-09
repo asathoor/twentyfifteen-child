@@ -9,11 +9,11 @@ Here we add stylesheets and scripts from various sources.
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 
 function theme_enqueue_styles() {
-    wp_enqueue_style( 'Mother Stylesheet', get_template_directory_uri() . '/style.css' ); 
+    wp_enqueue_style( 'Mother-Stylesheet', get_template_directory_uri() . '/style.css' ); 
 	// Jquery UI
     wp_enqueue_script('Jquery','//code.jquery.com/jquery-1.10.2.js');
-    wp_enqueue_script('Jquery UI','//code.jquery.com/ui/1.11.4/jquery-ui.js');
-	wp_enqueue_style('Jquery UI style','//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
+    wp_enqueue_script('Jquery-UI','//code.jquery.com/ui/1.11.4/jquery-ui.js');
+	wp_enqueue_style('Jquery-UI-style','//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 } 
 
 /** 
@@ -53,17 +53,32 @@ function stuff_to_wp_head(){
 }
 */
 
-add_action('wp_head','add_my_metatags');
+add_action('petj_seo','add_my_metatags');
 
 function add_my_metatags(){
 	?>
-
+print '
 	<!-- SEO -->
-	<meta name="description" content="Tutorials and resources for multimedia designers" />
-	<meta name="keywords" content="multimedia, html, css, wordpress, linux, open source, photo, dslr, web design, mysql" />
-	<meta name="author" content="Per Thykjær Jensen">
-	<meta name="robots" content="index, follow" />
-	<meta name="revisit-after" content="3 days" />
+	<meta name="application-name" content="Multimusen" />
+	<meta name="author" content="Per Thykjaer Jensen" />
+	<meta name="distributor" content="Multimusen.dk" />
+	<meta name="robots" content="Index" />
+	<meta name="description" content="Tips and tutorials for multimedia developers." />
+	<meta name="keywords" content="WordPress, PHP, MySQL, Jquery JavaScript, Flash, ActionScript, LAMP, XAMPP" />
+	<meta name="generator" content="META Tag Generator: http://toolswebtop.com/seo/metatag" />
+	<meta name="rating" content="General" />
+	<meta name="dcterms.title" content="Multimusen.dk " />
+	<meta name="dcterms.contributor" content="Per Thykjaer Jensen" />
+	<meta name="dcterms.creator" content="Per Thykjaer Jensen" />
+	<meta name="dcterms.publisher" content="Multimusen" />
+	<meta name="dcterms.description" content="Tips and tutorials for multimedia developers." />
+	<meta name="dcterms.rights" content="GPLv3" />
+	<meta property="og:type" content="website" />
+	<meta property="og:title" content="Multimusen.dk " />
+	<meta property="og:description" content="Tips and tutorials for multimedia developers." />
+	<meta property="twitter:title" content="Multimusen.dk " />
+	<meta property="twitter:description" content="Tips and tutorials for multimedia developers." />
+';
 
 	<?php
 }
@@ -77,18 +92,19 @@ Then use add_action and a function to fire off
 what you will.
 
 */
-
+/*
 add_action('add_accordion_script','the_accordion');
 
 function the_accordion(){
 	?>
 
   <script>
-  $(function() {
-    $( "#accordion" ).accordion();
-  });
+	  $(function() {
+    	$( "#accordion" ).accordion();
+  	  });
   </script>
 
 	<?php
 }
+*/
 ?>

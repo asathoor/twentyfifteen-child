@@ -3,7 +3,7 @@
  * The template for displaying the header
  *
  * Displays all of the head element and everything up until the "site-content" div.
- *
+ *   
  * @package WordPress
  * @subpackage Twenty_Fifteen
  * @since Twenty Fifteen 1.0
@@ -15,6 +15,11 @@
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width">
+	
+	<!-- petjseo -->
+	do_action('petj_seo');
+	
+	
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
 	<!--[if lt IE 9]>

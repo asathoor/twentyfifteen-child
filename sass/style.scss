@@ -12,13 +12,11 @@
  Text Domain:  twentyfifteen-child
 */
 
-$crimson: "crimson";
+/* ... add your own stuff below ... */
 
 @import url(https://fonts.googleapis.com/css?family=Open+Sans);
 
-p, h2.entry-title, h2.entry-title a {
-  font-family: 'Open Sans', sans-serif;
-  color: #fff; 
-	background-color: $crimson;
+p, h2.entry-title, h2.entry-title a { 
+font-family: 'Open Sans', sans-serif;
+color: red; 
 }
-
