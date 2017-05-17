@@ -19,12 +19,12 @@ function theme_enqueue_styles() {
 	wp_enqueue_style('Jquery-UI-style','//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css');
 	
 	// scripts for page-timeline.php
-	wp_enqueue_script( 'Page-Timeline-Js' , get_theme_file_uri() . '/js/timeline_main.js');
-	wp_enqueue_script( 'Page-Timeline-Modernizr-Js', get_theme_file_uri() . '/js/modernizr.js');
-	wp_enqueue_style( 'Page-Timeline-CSS', get_theme_file_uri() . '/css/timeline_style.css');
+	wp_enqueue_script( 'Page-Timeline-Js' , get_stylesheet_directory() . '/js/timeline_main.js');
+	wp_enqueue_script( 'Page-Timeline-Modernizr-Js', get_stylesheet_directory() . '/js/modernizr.js');
+	wp_enqueue_style( 'Page-Timeline-CSS', get_stylesheet_directory() . '/css/timeline_style.css');
 	
 	// theme costum styles
-	wp_enqueue_style( 'Twenty-Fifteen-Child-CSS', get_theme_file_uri() . 'style.css');
+	wp_enqueue_style( 'Twenty-Fifteen-Child-CSS', get_stylesheet_directory() . 'style.css');
 } 
 
 /** 
