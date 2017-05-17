@@ -1,19 +1,19 @@
-The Twentyfifteen Child
-=======================
+# The Twentyfifteen Child
 
-> A theme for the third semester Multimedia Design And Communicaiton Programme @BusinessAcademyAarhus [eaaa.dk](http://eaaa.dk).
+I like the Twenty Fifteen theme for blogs. This is a child theme based on Twenty Fifteen. I use this version on my blog [Research WordPress](http://research-wordpress.dk)
 
-## Tweaks
+## Some Tweaks
 
 In this child theme I have:
 
 * Enabled Jquery
 * Used filters, hooks etc.
 * Added test JavaScript
-* Experimented with SASS
+* Enabled SASS
+* Made a config.rb file for [Koala](http://koala-app.com/) so that the stylesheet is rendered in the theme's root dir.
 
 
-## Display an avatar
+## Tip: Display the avatar / gravatar
 
 ~~~~ 
 echo "<div class='avatar'>" 
@@ -21,3 +21,4 @@ echo "<div class='avatar'>"
 . "</div>";
 ~~~~
 
+Get your own avatar on [gravatar](https://en.gravatar.com/).
