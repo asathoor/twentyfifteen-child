@@ -19,7 +19,7 @@ In order to use the timeline costum page:
 
 1. Create a page and let the slug be `timeline`.
 2. Don't add any content apart from the headline.
-3. Edit page-timeline.php according to your whit.
+3. Edit page-timeline.php according to your ideas for a timeline.
 
 
 ## Tip: Display the avatar / gravatar
