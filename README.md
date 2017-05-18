@@ -15,7 +15,7 @@ In this child theme I have:
 
 ## Costum page: page-timeline.php
 
-In order to use the timeline costum page:
+I needed a timeline for my research project about WordPress. Of course the thing should be made in WordPress. In order to use the timeline costum page:
 
 1. Create a page and let the slug be `timeline`.
 2. Don't add any content apart from the headline.
